@@ -45,24 +45,10 @@ Apesar de ser uma interface simples, as seguintes operações lógicas foram tot
 
 - [x] **Listagem (`GET`):** Consome a lista de pensamentos salvos no `db.json` e os injeta dinamicamente na tela.
 - [x] **Criação (`POST`):** Captura os dados do formulário e envia para a API salvar um novo pensamento.
-- [x] **Edição (`PUT` / `PATCH`):** Permite alterar o conteúdo ou autoria de uma citação já existente.
+- [x] **Edição (`PUT`):** Permite alterar o conteúdo ou autoria de uma citação já existente.
 - [x] **Exclusão (`DELETE`):** Remove a citação do mural e do banco de dados (mock) simultaneamente.
 - [x] **Tratamento de Erros:** Validações simples e feedback caso o servidor não responda.
 
----
-
-## 📸 Interface do Projeto
-
-<div align="center">
-
-| Mural de Pensamentos | Novo Pensamento |
-| :---: | :---: |
-| *(Insira a URL do print aqui)* | *(Insira a URL do print aqui)* |
-
-*(Adicione acima os prints mostrando a interface renderizada)*
-</div>
-
----
 
 ## ▶️ Como Executar o Projeto
 
