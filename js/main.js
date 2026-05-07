@@ -24,9 +24,21 @@ async function manipularSubmissaoFormulario(event) {
     const autoria = document.getElementById("pensamento-autoria").value;
 
     try {
-        debugger
-        await api.salvarPensamento({conteudo, autoria})
-        ui.renderizarPensamentos();
+        if(id){
+            await api.atualizarPensamento({id, conteudo, autoria});
+
+            document.getElementById("pensamento-conteudo").value = "";
+            document.getElementById("pensamento-autoria").value = "";
+
+            ui.renderizarPensamentos();
+        }else{
+            await api.salvarPensamento({conteudo, autoria})
+
+            document.getElementById("pensamento-conteudo").value = "";
+            document.getElementById("pensamento-autoria").value = "";
+
+            ui.renderizarPensamentos();
+        }
 
     }catch (error){
         alert("Erro ao salvar o pensamento");
