@@ -29,15 +29,17 @@ async function manipularSubmissaoFormulario(event) {
 
             document.getElementById("pensamento-conteudo").value = "";
             document.getElementById("pensamento-autoria").value = "";
+            document.getElementById("pensamento-id").value = "";
 
-            ui.renderizarPensamentos();
+            await ui.renderizarPensamentos();
         }else{
             await api.salvarPensamento({conteudo, autoria})
 
             document.getElementById("pensamento-conteudo").value = "";
             document.getElementById("pensamento-autoria").value = "";
+            document.getElementById("pensamento-id").value = "";
 
-            ui.renderizarPensamentos();
+            await ui.renderizarPensamentos();
         }
 
     }catch (error){
