@@ -1,6 +1,14 @@
 import ui from "./ui.js";
 import api from "./api.js";
 
+const buttonCancelar = document.getElementById("botao-cancelar");
+
+buttonCancelar.addEventListener("click", () => {
+    document.getElementById("pensamento-conteudo").value = "";
+    document.getElementById("pensamento-autoria").value = "";
+    console.log("funcionou");
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     ui.renderizarPensamentos();
 
